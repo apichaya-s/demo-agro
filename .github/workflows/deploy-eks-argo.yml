@@ -25,11 +25,6 @@ jobs:
         aws-region: ${{ secrets.AWS_REGION }}
     - name: setup aws cli
       uses: aws-actions/setup-sam@v2
-    - name: Kubectl tool installer
-      uses: Azure/setup-kubectl@v4.0.0
-      with:
-        # Version of kubectl
-        version: ${{ secrets.EKS_VERSION }}
     - name: Pull AWS EKS context
       shell: bash
       run: |
