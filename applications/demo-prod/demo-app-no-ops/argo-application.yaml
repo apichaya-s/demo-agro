@@ -12,10 +12,10 @@ spec:
   sources:
     - chart: rollout-chart
       repoURL: https://apichaya-s.github.io/helm-charts
-      targetRevision: 0.1.2
+      targetRevision: 0.1.4
       helm:
         valueFiles:
-          - $values/applications/demo-app-no-ops/values-prod.yaml
+          - $values/applications/demo-prod/demo-app-no-ops/values-prod.yaml
     - repoURL: https://github.com/apichaya-s/demo-argo.git
       targetRevision: main
       ref: values
