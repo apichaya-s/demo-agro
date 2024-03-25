@@ -6,8 +6,8 @@ image:
   # The tag will be the current version if .Values.rolloutStrategy is none
   # Otherwise tag will be the previous version while rolloutTag will be the current version
   rolloutStrategy: canary # canary|canary|blueGreen
-  tag: latest
-  rolloutTag: latest
+  tag: v1.0.0
+  rolloutTag: v1.0.1
 
 imagePullSecrets: []
 nameOverride: ""

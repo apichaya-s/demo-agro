@@ -10,15 +10,15 @@ spec:
 
   # Source of the application manifests
   sources:
-    - repoURL: https://github.com/apichaya-s/demo-argo.git
-      targetRevision: main
-      ref: values
-    - chart: chart
+    - chart: rollout-chart
       repoURL: https://apichaya-s.github.io/helm-charts
-      targetRevision: 0.1.0
+      targetRevision: 0.1.2
       helm:
         valueFiles:
           - $values/applications/demo-app-no-ops/values-prod.yaml
+    - repoURL: https://github.com/apichaya-s/demo-argo.git
+      targetRevision: main
+      ref: values
 
   # Destination cluster and namespace to deploy the application
   destination:
