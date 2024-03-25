@@ -1,4 +1,4 @@
-{{- if .Values.rollout.canary.autoPromotionEnabled }}
+{{- if and (ne .Values.image.rolloutStrategy "none" ) .Values.rollout.canary.autoPromotionEnabled }}
 apiVersion: argoproj.io/v1alpha1
 kind: AnalysisTemplate
 metadata:
